@@ -1,0 +1,14 @@
+body{
+	padding: 0px;
+	margin: 0px;
+	background-color: white;
+}
+
+nav{
+	background-color: grey;
+	font-size: 32px;
+	text-align: center;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	margin: 1px;
+}

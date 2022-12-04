@@ -1,6 +1,6 @@
 {
     "build_systems": [{
-        "cmd": ["sudo node app.js"],
+        "cmd": ["sudo node server.js"],
         "name": "Debug",
         "shell": true,
         "working_dir": "$folder"

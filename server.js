@@ -13,16 +13,17 @@ class server {
 		this.SERVER_PORT = SERVER_PORT
 		this.SERVER_IP = SERVER_IP
 		this.app = express();
+
 		this.app.use(express.static("public"))
+		console.log("[ SERVER ]  Started server.")
 	}
 
 	start_server(){
 		this.app.listen(this.SERVER_PORT, this.SERVER_IP, error => {
-            if (error) {
-                console.log("Error in server startup.");
-            } else {
-                console.log('Example app listening at http://' + this.SERVER_IP + ":" + this.SERVER_PORT)
-            }
+            if (error)
+            	console.log("[ SERVER ]  Error in server startup.");
+            else
+                console.log("[ SERVER ]  Example app listening at http://" + this.SERVER_IP + ":" + this.SERVER_PORT)
         });
 	}
 
@@ -33,9 +34,9 @@ class server {
 			// res.download("app.js")
 			// res.json({"message":"error"});
 			// res.sendStatus(500);
-			res.send("Hi");
+			res.send("Hello");
 			// res.redirect("/page")
-			console.log("[ APP ]  Req path: " + req.path)
+			console.log("[ SERVER ]  Req path: " + req.path)
 		})
 	}
 
@@ -59,6 +60,5 @@ class server {
 }
 
 
-console.log("Starting server...")
 let main_server = new server(SERVER_IP, SERVER_PORT)
 main_server.start_server()

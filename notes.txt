@@ -1,0 +1,9 @@
+things to have
+
+parallax effect
+
+jumbotron
+blog
+resume
+project showcase
+contact
